@@ -1,0 +1,199 @@
+/* B2BFeaturesSection.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.features-section {
+    background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+    padding: 0px 80px;
+    min-height: 75vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-PartnerShip {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    /* margin-bottom: 60px; */
+    color: white;
+    /* background: rgba(255, 255, 255, 0.1); */
+    backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    padding: 40px;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.section-description {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 2px auto;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.features-grid-Partner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.feature-card-Partner {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.feature-card-Partner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 1);
+}
+
+.feature-icon-Partner {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #6B5EE3 0%, #8B5CF6 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.feature-card-Partner:hover .feature-icon-Partner {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(107, 94, 227, 0.4);
+}
+
+.feature-icon-Partner svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.feature-text-Partner {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+    .features-grid-Partner {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 60px 15px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+    }
+
+    .section-header {
+        padding: 30px 20px;
+        margin-bottom: 40px;
+    }
+
+    .features-grid-Partner {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-card-Partner {
+        padding: 25px 20px;
+        min-height: 240px;
+    }
+
+    .feature-icon-Partner {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 20px;
+    }
+
+    .feature-icon-Partner svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid-Partner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section {
+        padding: 40px 15px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .section-header {
+        padding: 25px 15px;
+    }
+
+    .feature-card-Partner {
+        padding: 20px 15px;
+        min-height: 220px;
+    }
+
+    .feature-icon-Partner {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .feature-icon-Partner svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .feature-text-Partner {
+        font-size: 0.95rem;
+    }
+}

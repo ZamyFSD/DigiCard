@@ -1,0 +1,225 @@
+ /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+} */
+
+.brand-carousel-container {
+    max-width: 90vw;
+    margin: 40px auto;
+}
+
+.brand-carousel-wrapper {
+    position: relative;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* border-radius: 20px; */
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); */
+}
+
+.brand-carousel {
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.brand-carousel-track {
+    display: flex;
+    animation: brand-scroll 25s linear infinite; 
+    gap: 20px;
+}
+@keyframes brand-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Half because we'll duplicate items */
+}
+
+.brand-card {
+    min-width: calc(33.333% - 70px);
+    height: 250px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 1s ease;
+}
+
+.brand-card:hover {
+   transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.brand-card-header {
+    padding: 25px;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+}
+
+.brand-card-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.brand-card-header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.brand-card-body {
+    padding: 40px 25px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.brand-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-icon {
+    transform: scale(1.1);
+}
+
+.brand-card-footer {
+    padding: 25px;
+}
+
+.brand-explore-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brand-explore-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Colors */
+.brand-netflix { background: linear-gradient(135deg, #e50914, #b20710); }
+.brand-explore-btn.brand-netflix { background: linear-gradient(135deg, #e50914, #b20710); }
+
+.brand-spotify { background: linear-gradient(135deg, #1db954, #1ed760); }
+.brand-explore-btn.brand-spotify { background: linear-gradient(135deg, #1db954, #1ed760); }
+
+.brand-adidas { background: linear-gradient(135deg, #000000, #333333); }
+.brand-explore-btn.brand-adidas { background: linear-gradient(135deg, #000000, #333333); }
+
+.brand-uber { background: linear-gradient(135deg, #000000, #333333); }
+.brand-explore-btn.brand-uber { background: linear-gradient(135deg, #000000, #333333); }
+
+.brand-ubereats { background: linear-gradient(135deg, #06c167, #05a855); }
+.brand-explore-btn.brand-ubereats { background: linear-gradient(135deg, #06c167, #05a855); }
+
+.brand-doordash { background: linear-gradient(135deg, #ff3008, #e02e0a); }
+.brand-explore-btn.brand-doordash { background: linear-gradient(135deg, #ff3008, #e02e0a); }
+
+.brand-zomato { background: linear-gradient(135deg, #e23744, #d1293a); }
+.brand-explore-btn.brand-zomato { background: linear-gradient(135deg, #e23744, #d1293a); }
+
+.brand-virgin { background: linear-gradient(135deg, #ed1c24, #d11920); }
+.brand-explore-btn.brand-virgin { background: linear-gradient(135deg, #ed1c24, #d11920); }
+
+.brand-xbox { background: linear-gradient(135deg, #107c10, #0e6e0e); }
+.brand-explore-btn.brand-xbox { background: linear-gradient(135deg, #107c10, #0e6e0e); }
+
+.brand-playstation { background: linear-gradient(135deg, #003087, #0070d1); }
+.brand-explore-btn.brand-playstation { background: linear-gradient(135deg, #003087, #0070d1); }
+
+.brand-nintendo { background: linear-gradient(135deg, #e60012, #cc000f); }
+.brand-explore-btn.brand-nintendo { background: linear-gradient(135deg, #e60012, #cc000f); }
+
+.brand-fc25 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.brand-explore-btn.brand-fc25 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+.brand-mastercard { background: linear-gradient(135deg, #eb001b, #ff5f00); }
+.brand-explore-btn.brand-mastercard { background: linear-gradient(135deg, #eb001b, #ff5f00); }
+
+.brand-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.brand-nav-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.brand-prev-btn {
+    left: 10px;
+}
+
+.brand-next-btn {
+    right: 10px;
+}
+
+.brand-dots-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.brand-dots {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.brand-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brand-dot.brand-active {
+    background: white;
+    width: 30px;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .brand-card {
+        min-width: calc(100% - 0px);
+    }
+    
+    .brand-carousel-wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .brand-card {
+        min-width: calc(50% - 10px);
+    }
+}
